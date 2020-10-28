@@ -1,0 +1,763 @@
+@font-face{
+  src: url(../fonts/Corben.ttf);
+  font-family: 'fontecorben'; 
+}
+@font-face{
+  src: url(../fonts/MarcellusSC.ttf);
+  font-family: 'fontemarcellus'; 
+}
+@font-face{
+  src: url(../fonts/MeriendaOne.ttf);
+  font-family: 'fontemerienda'; 
+}
+@font-face{
+  src: url(..//fonts/OpenSans.ttf);
+  font-family: 'fonteopenSans'; 
+}
+@font-face{
+  src: url(../fonts/OverlockSC.ttf);
+  font-family: 'fonteoverlock'; 
+}@font-face{
+  src: url(../fonts/ProstoOne.ttf);
+  font-family: 'fonteprosto'; 
+}
+@font-face{
+  src: url(../fonts/SourceSansPro.ttf);
+  font-family: 'fontesansPro'; 
+}
+
+/*=========== RESET ==========*/
+* {
+	margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none; /* cor no contorno das letras */
+    font-weight: 300;
+    box-sizing: border-box; /* */
+    font-family: 'Lato', sans-serif;
+}
+body {
+	background-color: #f5f5f5;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+}
+/*===========CABECALHO============*/
+.cabecalho {
+	width: 100%; 
+	float: left;
+    padding: 1.7% 4%; 
+    text-align: center; 
+    background-color: rgba(0,0,0,0.45);
+}
+/*=========== BG COLORS ==========*/
+.bg-gradient {
+	background: linear-gradient(to right,#FFA200,#FFB300); /* cores gradientes da direita p esquerda */
+}
+.bg-black {
+	background-color: #130400; 
+}
+.bg-white {
+	background-color: #fff;
+}
+/*=========== HELPERS ==========*/
+.radius {
+	border-radius: 7px;
+}
+/*=====DIMINUIR CÓDIGO =========*/
+.diminui {
+	width: 100%;
+	float: left;
+	padding: 3% 4%;
+	text-align: center;
+}
+.diminuir {
+	width: 100%;
+	float: left;
+	padding: 0% 3%;
+	text-align: center;
+}
+/*======== CABEÇALHO ==========*/
+.logo {
+	width: 70px;
+	height: 70px; 
+	float: left; 
+	background: url(../images/logos/logo-mobile_editado.png) center center/ 70px no-repeat;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+.btn-menu {
+	width: 56px; 
+	height: 56px; 
+	float: right; 
+	text-align: center; 
+	color: #fff; 
+	border-radius:56px; /* borda redonda */
+	cursor: pointer;
+	margin-top: 5px;
+}
+header.cabecalho{
+	border-bottom: 0.6px solid #C0C0C0;
+	z-index: 3;
+}
+header{
+	position:fixed;
+}
+/*========== MENU ==========*/
+.menu {
+	display:none; 
+	width: 100%; 
+	height: 100%; 
+	position: fixed; 
+	background-color: rgba(0,0,0,0.9); 
+	top: 0; 
+	left: 0;
+}
+.btn-close {
+	font-size: 1.5em; 
+	color: #fff;
+	float: right; 
+	cursor: pointer; /* */
+	margin: 2% 3% 0 0;
+}
+.menu ul{
+	width: 100%; 
+	float: left; 
+	text-align: center;
+}
+.menu li{
+	padding: 1.5%;
+}
+.menu li a{
+	font-size: 2em; 
+	color: #fff; 
+	padding: 1.5% 3%;
+}
+.menu li a:hover{
+	border:1px solid #FFA200;
+}
+/*========= BANNER ==========*/
+.banner {
+	background: url(../images/museo/museo091_editado.jpg) no-repeat fixed;
+	width: 100%;
+	float: left;
+	padding: 3% 4%;
+	text-align: center;
+	padding-top:140px; /* TEMPORARIO */
+	background-size: cover; /* aumenta a escala da imagem para caber no elemento (mantem a proporção em pixel)*/
+	border-bottom: 0.7px solid #C0C0C0;
+}
+.title {
+	width: 100%;
+}
+.title h1 {
+	font-size: 3.5em; 
+	color: #E0E0E0;
+    font-family: 'fontemerienda';
+}
+.title h3{
+	padding-top: 7px; /* */
+	color:#E0E0E0;
+	font-family: 'fonteopenSans';
+}
+.buttons {
+    width: 100%; 
+    margin-top: 2%;
+}
+.buttons i {
+	float: right;
+}
+.btn {
+	width: 100%; 
+	font-size: 1.5em; 
+	text-align: left; 
+	cursor: pointer;
+	padding: 5%; 
+}
+/*======== CONTEUDO =========*/
+section{ /* setei as sections para float left, pq percebi que o banner está flutuante, assim o banner não fica por cima */
+	float: left;
+	width: 100%;
+}
+section:not(#home){ /* todo section q não for o home tem 500 px de altura VERIFICAR ISSO */
+	height: 650px;
+}
+section#sobre{
+	background-color: #FFFFF0;
+    padding: 2% 5% 0 5%;
+	line-height: 1.5; 
+    height: auto; 
+    letter-spacing: 0.5px;
+}
+section#galeria{
+    padding: 2% 5% 0 5%;
+	line-height: 1.5; 
+    height: auto;
+    letter-spacing: 0.5px;
+    background-color: #FFFFF0;
+}
+section#info{
+    padding: 2% 5% 0 5%;
+	line-height: 1.5; 
+    height: auto;
+    letter-spacing: 0.5px;
+    border-bottom: 0.6px solid #cccccc; 
+    background-color: #FFFFF0; 
+}
+section#contato{
+	padding: 2% 5% 2% 5%;
+	line-height: 1.5; 
+    height: auto;
+    letter-spacing: 0.5px;
+    border-bottom: 0.6px solid #cccccc;
+    background-color: #FFFFF0;
+}
+
+/* ====== SOBRE ======== */
+section#sobre h1{
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 3%;
+	font-size: 2em;
+	font-style: inherit;
+	color:#fed136;
+	font-weight: 500;
+}
+section#sobre h6{
+	text-align: center;
+	padding-top: 3%;
+	font-family: 'Open Sans', sans-serif;
+	color: #5C4033;
+	font-style: italic;
+}
+section#sobre p{
+	text-align: center;
+	padding-top: 3%;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+}
+.servico {
+	width: 100%;  
+	text-align: left;
+    margin-bottom: 3%;
+	float: left;
+	-webkit-transition: all 1s ease; /* better mouse transition  */
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+	transition: all 1s ease;
+	cursor: pointer;
+}
+.servico:hover{
+   opacity: 1;
+   background-color: #f2eae4;
+   border-radius: 15px;
+   
+}
+.artefato {
+	padding: 7%;
+}
+.artefato h2 {
+    text-transform: uppercase;
+	color:#A68064;
+	text-align: center;
+	padding-top: 3%;
+	font-weight: 500;
+	font-size: 1.5em;
+}
+.artefato p {
+	margin-top: 6%;
+	color: #130400; 
+	line-height: 1.5em;
+	font-family: 'Lato';
+	text-align: justify;
+}
+section#video{
+	border-top: 0.6px solid #cccccc;
+	border-bottom: 0.6px solid #cccccc;
+	background-color: #f2eae4;
+    text-indent: 10px;
+    padding:2% 5% 2% 5%;
+	line-height: 1.5; 
+    height: auto;
+    margin: 0 auto;
+}
+section#video h3{
+	text-transform: uppercase;
+	color:#A68064;
+	text-align: center;
+	padding-bottom: 2%;
+	font-weight: 500;
+	font-size: 1.5em;
+}
+/*======= GALERIA ========*/
+section#galeria h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+	padding-top: 3%;
+	font-style: inherit;
+	color:#fed136;
+	font-weight: 500;
+}
+section#galeria h6{
+	text-align: center;
+	padding-top: 1%;
+	font-family: 'Open Sans', sans-serif;
+	color: #5C4033;
+	font-style: italic;
+}
+.servi {
+	width: 100%; 
+}
+.servi img {
+	border-radius: 7px 7px 7px 7px;
+	border: 5px solid #fff;
+	box-shadow: 1px 1px 3px  rgba(0,0,0,0.4);
+}
+.servi .flip{
+	width: 270px;
+	height: 100px;
+	margin-bottom: 50%;
+	float: left;
+	perspective: 1000px;
+	z-index: 2;
+	margin-left: -1.8%;
+}
+.servi .flip .frente{
+	position: absolute;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+	transition: all .4s linear;
+}
+.servi .flip .fundo{
+	position: absolute;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: all .4s linear;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+.servi .flip:hover .frente{
+   transform: rotateY(-180deg);
+   cursor: pointer;
+}
+.servi .flip:hover .fundo{
+   transform: rotateY(0deg);
+   cursor: pointer;
+}
+.servi .flip h3{
+	background-color: #000;
+	color: #fff;
+	margin-left: 5px;
+	font-family: 'Arial';
+	width: 97%;
+	bottom: 35px;
+	position: absolute;
+	opacity: .8;
+}
+/*======= INFORMACOES ======*/
+section#info h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+	padding-top: 3%;
+	font-style: inherit;
+	color:#fed136;
+	font-weight: 500;
+}
+section#info h6{
+	text-align: center;
+	padding-top: 1%;
+	font-family: 'Open Sans', sans-serif;
+	color: #5C4033;
+	font-style: italic;
+}
+.serv {
+	width: 100%;  
+	text-align: left;  
+	margin-bottom: 3%;
+	background-color: rgb(255,255,255);
+}
+.serv img {
+	border-radius: 7px 7px 0 0;
+}
+.caixa {
+	padding: 7%;
+}
+.caixa h3 {
+	font-size: 1.3em; 
+	color: #130400; 
+	font-weight: 700;
+	text-align: center;
+}
+.caixa h4 {
+	font-size: 1em;
+	color: #130400; 
+	margin-top: 2%; 
+	text-align: center;
+	font-weight: 400;
+	font-style: italic;
+}
+.caixa p {
+	margin-top: 6%; 
+	color: #130400; 
+	line-height: 1.5em;
+	text-align: justify;
+	font-weight: 400;
+}
+/*===== CONTATO =====*/ 
+
+section#contato h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2em;
+	padding-top: 3%;
+	font-style: inherit;
+	color:#fed136;
+	font-weight: 500;
+}
+section#contato h6{
+	text-align: center;
+	padding-top: 1%;
+	font-family: 'Open Sans', sans-serif;
+	color: #5C4033;
+	font-style: italic;
+}
+section#contato p{
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	line-height: 0.7; 
+}
+section#contato span{
+	font-weight: bold;
+}
+section#mapa{
+	background-color: #f2eae4;
+    height: auto;
+}
+iframe#mapa1{
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*========= RODAPÉ =========*/
+.rodape{
+	width: 100%; 
+	float: left; 
+	padding: 2% 2%; 
+	text-align: center;
+}
+.social-icons a {
+	font-size: 1.5em; 
+	color: rgba(255,255,255,0.7); 
+	margin-right: 3%;
+}
+.social-icons a:last-child {
+	margin-right: 0;
+}
+.social-icons a:hover {
+	color: rgb(255,255,255);
+}
+.copyright {
+	color: rgba(255, 255, 255, 0.7);
+	margin-top:1%;
+}
+.informacoes{
+	clear: both;
+	height: 7%;
+	padding-top: 0.5%;
+	text-align: center;
+	width: 100%;
+    font-family: 'Lato';
+    border-top: 0.6px solid #4e4e4e;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    background: #322F2F; 
+}
+.informacoes span{
+	font-weight: bold;
+}
+.menu-rodape {
+	clear: both;
+	margin-top: 1%;
+	width: auto;    
+    display: block !important; 
+    position: static;
+}
+.menu-rodape li {
+	display: inline-block;
+    text-align: center;
+	padding: 0; 
+}
+.menu-rodape li a {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 1em; 
+	padding: 15px;
+}
+.menu-rodape a:hover{
+	color: rgb(255,255,255);
+}
+iframe {  
+  height: 56.25vw;
+  width: 100%; 
+}
+
+/* ========== MOBILE FIRST ==========*/
+
+/* SMALL DEVICES - SMARTPHONES */
+@media screen and (min-width: 480px) {
+.logo {
+	width: 300px; 
+	background: url(../images/logos/logo_museodeloro02.png) center center / 300px no-repeat;
+	margin: -6px;
+}
+.btn {
+	font-size: 2em;
+}
+.servi .flip{
+	width: 340px;
+	height: 200px;
+	margin-bottom: 20%;
+	margin-left: 5%;
+}
+.servi .flip h3{
+	margin-left: 5px;
+	width: 97%;
+	bottom: 35px;
+}
+}
+
+/* SMALL DEVICES - TABLETS*/
+@media screen and (min-width: 768px) {
+.servico {
+	width: 30%; 
+	float: left;
+    margin-left: 3%;
+}
+.serv {
+	width: 49%; 
+	float: left;
+	margin-right: 2%;
+}
+.serv:nth-child(2){
+	margin-right: 0;
+}
+.servi {
+	width: 49%; 
+	float: left;
+	margin-right: 2%;
+}
+.servi:nth-child(2){
+	margin-right: 0;
+}
+ iframe { 
+    height: 315px;
+    width: 560px; 
+}
+div#banner-2{
+	background: url(../images/museo/museo06.jpg) no-repeat fixed;
+	height: 450px; /*TEMPORARIO */
+	background-size: cover;
+	float: left;
+	background-size: 100% auto;
+	background-position: center;  
+	width: 100%;
+}
+div#banner-3{
+	background: url(../images/museo/museo05.jpg) no-repeat fixed;
+	height: 450px; /*TEMPORARIO*/
+	background-size: cover;
+	float: left;
+	background-size: 100% auto;
+	background-position: center;  
+	width: 100%;
+}
+div#banner-4{
+	background: url(../images/museo/museo10.jpg) no-repeat fixed;
+	height: 450px; /*TEMPORARIO */
+	background-size: cover;
+	float: left;
+	background-size: 100% auto;
+	background-position: center;  
+	width: 100%;
+}
+section#contato p#linha2{
+	padding-top: 0.7%;
+}
+section#contato p#linha3{
+	padding-top: 0.7%;
+}
+section#contato p#linha4{
+	padding-top: 0.7%;
+}
+section#contato p#linha5{
+	padding-top: 0.7%;
+}
+section#contato p{
+	line-height: 0; 
+}
+.servi .flip{
+	width: 340px;
+	height: 200px;
+	margin-bottom: 20%;
+	margin-right: 5%;
+}
+.servi .flip h3{
+	margin-left: 5px;
+	width: 97%;
+	bottom: 35px;
+}
+}
+
+/* MEDIUM DEVICES - TABLETS & DESKTOPS*/
+@media screen and (min-width: 960px) {
+.title {
+	width: 100%; 
+}
+.title h1 {
+	font-size: 3em;
+}
+.title h3 {
+	font-size: 1em;
+}
+.informacoes{
+	height: 30px;
+}
+.info-museu{
+	padding-top: 3%;
+}
+.info-museo{
+   padding-top: 1%;
+}
+.info-museu2{
+	padding-top: 3%;
+}
+.info-museu3{
+   margin-top: 2%;
+   margin-left: 1%;
+}
+.info-museu4{
+   margin-left: 1%;
+}
+.info-museu5{
+   margin-bottom: 6%;
+   margin-top: 1%;
+   margin-left: 1%;
+}
+.serv {
+	width: 32%; 
+}
+.serv:nth-child(2){
+	margin-right: 2%;
+}
+.serv:nth-child(3){
+	margin-right: 0;
+}
+.servi {
+	width: 32%;
+}
+.servi:nth-child(2){
+	margin-right: 2%;
+}
+.servi:nth-child(3){
+	margin-right: 0;
+}
+
+
+/* LARGE DEVICES - WIDE SCREENS*/
+@media screen and (min-width: 1280px) {
+.btn-menu {
+	display: none;
+}
+.btn-close {
+	display: none;
+}
+.menu {
+	width: auto;
+	margin-top: 0.6%;
+	float: right;
+	background-color: transparent;
+    display: block !important; 
+    position: static;
+}
+.menu li {
+	padding:0; 
+	float: left;
+}
+.menu li a {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px; 
+	font-size: 14px;
+	font-weight: 300;
+	padding: 15px;
+}
+.menu li a:hover {
+	border: none; 
+	color: #FFD600; 
+}
+.logo{
+	margin-top: -1.45%;
+}
+.banner{
+	height: 638px; /*temporario perguntar p Hebert*/
+	border-bottom: 0.6px solid #cccccc;
+}
+.seta-2{
+	margin-top: 6.8%;
+}
+header.cabecalho{
+	height: 80px; 
+}
+.title{
+	height: 100%;
+	margin-top: 100px;
+}
+.title h1 {
+	font-size: 4.2em;
+}
+.title h3 {
+	font-size: 1.5em;
+}
+.informacoes{
+	clear: both;
+	height: 30px;
+	padding-top: 0.5%;
+	text-align: center;
+	width: 100%;
+    font-family: 'Lato';
+    border-top: 0.6px solid #4e4e4e;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    background: #322F2F; 
+}
+section#sobre h6{
+	text-align: center;
+	padding-top: 1%;
+	font-family: 'Open Sans', sans-serif;
+	color: #5C4033;
+	font-style: italic;
+}
+.servi .flip{
+	width: 340px;
+	height: 200px;
+	margin-bottom: 0;
+}
+.servi .flip h3{
+	margin-left: 5px;
+	width: 97%;
+	bottom: 35px;
+}
+}}
